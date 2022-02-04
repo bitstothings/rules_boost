@@ -1,7 +1,7 @@
 load("@bazel_skylib//rules:copy_file.bzl", "copy_file")
 load("@bazel_skylib//lib:selects.bzl", "selects")
 load("@bazel_skylib//rules:common_settings.bzl", "bool_flag")
-load("//:boost/boost.bzl", "boost_library", "boost_so_library", "hdr_list")
+load("@bitstothings_rules_boost//:boost/boost.bzl", "boost_library", "boost_so_library", "hdr_list")
 
 _w_no_deprecated = selects.with_or({
     ("@platforms//os:linux", "@platforms//os:osx", "@platforms//os:ios", "@platforms//os:watchos", "@platforms//os:tvos"): [
