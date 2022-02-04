@@ -209,7 +209,7 @@ def boost_deps():
     maybe(
         http_archive,
         name = "boost",
-        build_file = "@bitstothings_rules_boost//:BUILD.boost",
+        build_file = "@com_github_bitstothings_rules_boost//:BUILD.boost",
         patch_cmds = ["rm -f doc/pdf/BUILD"],
         patch_cmds_win = ["Remove-Item -Force doc/pdf/BUILD"],
         sha256 = "94ced8b72956591c4775ae2207a9763d3600b30d9d7446562c552f0a14a63be7",
