@@ -1,5 +1,5 @@
 local_repository(
-    name = "@com_github_bitstothings_rules_boost",
+    name = "com_github_bitstothings_rules_boost",
     path = "..",
 )
 
