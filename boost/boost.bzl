@@ -163,7 +163,7 @@ def boost_deps():
     maybe(
         http_archive,
         name = "net_zlib_zlib",
-        build_file = "//:BUILD.zlib",
+        build_file = "@com_github_bitstothings_rules_boost//:BUILD.zlib",
         sha256 = "c3e5e9fdd5004dcb542feda5ee4f0ff0744628baf8ed2dd5d66f8ca1197cb1a1",
         strip_prefix = "zlib-1.2.11",
         urls = [
@@ -177,7 +177,7 @@ def boost_deps():
     maybe(
         http_archive,
         name = "org_bzip_bzip2",
-        build_file = "//:BUILD.bzip2",
+        build_file = "@com_github_bitstothings_rules_boost//:BUILD.bzip2",
         sha256 = "ab5a03176ee106d3f0fa90e381da478ddae405918153cca248e682cd0c4a2269",
         strip_prefix = "bzip2-1.0.8",
         url = "https://sourceware.org/pub/bzip2/bzip2-1.0.8.tar.gz",
@@ -186,7 +186,7 @@ def boost_deps():
     maybe(
         http_archive,
         name = "org_lzma_lzma",
-        build_file = "//:BUILD.lzma",
+        build_file = "@com_github_bitstothings_rules_boost//:BUILD.lzma",
         sha256 = "71928b357d0a09a12a4b4c5fafca8c31c19b0e7d3b8ebb19622e96f26dbf28cb",
         strip_prefix = "xz-5.2.3",
         urls = [
@@ -198,7 +198,7 @@ def boost_deps():
     maybe(
         http_archive,
         name = "com_github_facebook_zstd",
-        build_file = "//:BUILD.zstd",
+        build_file = "@com_github_bitstothings_rules_boost//:BUILD.zstd",
         sha256 = "e28b2f2ed5710ea0d3a1ecac3f6a947a016b972b9dd30242369010e5f53d7002",
         strip_prefix = "zstd-1.5.1",
         urls = [

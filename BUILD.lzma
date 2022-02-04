@@ -26,12 +26,12 @@ config_setting(
 copy_file(
     name = "copy_config",
     src = selects.with_or({
-        "@platforms//os:android": "//:config.lzma-android.h",
-        "@platforms//os:linux": "//:config.lzma-linux.h",
-        ":osx_arm64": "//:config.lzma-osx-arm64.h",
-        ":osx_x86_64": "//:config.lzma-osx-x86_64.h",
+        "@platforms//os:android": "@com_github_bitstothings_rules_boost//:config.lzma-android.h",
+        "@platforms//os:linux": "@com_github_bitstothings_rules_boost//:config.lzma-linux.h",
+        ":osx_arm64": "@com_github_bitstothings_rules_boost//:config.lzma-osx-arm64.h",
+        ":osx_x86_64": "@com_github_bitstothings_rules_boost//:config.lzma-osx-x86_64.h",
         ("@platforms//os:ios", "@platforms//os:watchos", "@platforms//os:tvos"): "apple_config",
-        "@platforms//os:windows": "//:config.lzma-windows.h",
+        "@platforms//os:windows": "@com_github_bitstothings_rules_boost//:config.lzma-windows.h",
     }),
     out = "src/liblzma/api/config.h", # minimize the number of exported include paths
 )
