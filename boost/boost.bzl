@@ -170,11 +170,11 @@ def boost_deps():
         http_archive,
         name = "net_zlib_zlib",
         build_file = "@com_github_bitstothings_rules_boost//:BUILD.zlib",
-        sha256 = "c3e5e9fdd5004dcb542feda5ee4f0ff0744628baf8ed2dd5d66f8ca1197cb1a1",
-        strip_prefix = "zlib-1.2.11",
+        sha256 = "91844808532e5ce316b3c010929493c0244f3d37593afd6de04f71821d5136d9",
+        strip_prefix = "zlib-1.2.12",
         urls = [
-            "https://mirror.bazel.build/zlib.net/zlib-1.2.11.tar.gz",
-            "https://zlib.net/zlib-1.2.11.tar.gz",
+            "https://mirror.bazel.build/zlib.net/zlib-1.2.12.tar.gz",
+            "https://zlib.net/fossils/zlib-1.2.12.tar.gz",
         ],
     )
 
@@ -216,12 +216,13 @@ def boost_deps():
         http_archive,
         name = "boost",
         build_file = "@com_github_bitstothings_rules_boost//:BUILD.boost",
+        patches = ["@com_github_bitstothings_rules_boost//:0001-json-array-erase-relocate.patch"],
         patch_cmds = ["rm -f doc/pdf/BUILD"],
         patch_cmds_win = ["Remove-Item -Force doc/pdf/BUILD"],
-        sha256 = "94ced8b72956591c4775ae2207a9763d3600b30d9d7446562c552f0a14a63be7",
-        strip_prefix = "boost_1_78_0",
+        sha256 = "273f1be93238a068aba4f9735a4a2b003019af067b9c183ed227780b8f36062c",
+        strip_prefix = "boost_1_79_0",
         urls = [
-            "https://boostorg.jfrog.io/artifactory/main/release/1.78.0/source/boost_1_78_0.tar.gz",
+            "https://boostorg.jfrog.io/artifactory/main/release/1.79.0/source/boost_1_79_0.tar.gz",
         ],
     )
 
