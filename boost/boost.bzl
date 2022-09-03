@@ -85,7 +85,7 @@ def boost_library(
     native.alias(
         name = name,
         actual = ":" + namespace + "_" + name,
-        visibility = visibility
+        visibility = visibility,
     )
 
     return native.cc_library(
@@ -210,6 +210,7 @@ def boost_deps():
         urls = [
             "https://github.com/facebook/zstd/releases/download/v1.5.1/zstd-1.5.1.tar.gz",
         ],
+        linkstatic = True,
     )
 
     maybe(
