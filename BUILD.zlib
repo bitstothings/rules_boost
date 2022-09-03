@@ -84,6 +84,7 @@ cc_library(
         "@platforms//os:windows": [],
         "//conditions:default": ["Z_HAVE_UNISTD_H"],
     }),
+    linkstatic = True
 )
 
 # For OSs that bundle libz
