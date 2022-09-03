@@ -538,6 +538,7 @@ boost_library(
         ":throw_exception",
         ":type_traits",
     ],
+    linkstatic = True
 )
 
 boost_library(
