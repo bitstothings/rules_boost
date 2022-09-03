@@ -32,6 +32,7 @@ cc_library(
         "XXH_NAMESPACE=ZSTD_",
     ],
     visibility = ["//visibility:public"],
+    linkstatic = True,
 )
 
 # Hopefully, the need for these OSxCPU config_setting()s will be obviated by a fix to https://github.com/bazelbuild/platforms/issues/36

@@ -210,7 +210,6 @@ def boost_deps():
         urls = [
             "https://github.com/facebook/zstd/releases/download/v1.5.1/zstd-1.5.1.tar.gz",
         ],
-        linkstatic = True,
     )
 
     maybe(
