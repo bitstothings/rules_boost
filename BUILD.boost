@@ -330,7 +330,6 @@ cc_library(
     }),
     visibility = ["//visibility:private"],
     deps = BOOST_ATOMIC_DEPS,
-    linkstatic = True
 )
 
 boost_library(
