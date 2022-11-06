@@ -195,7 +195,7 @@ def boost_deps():
     maybe(
         http_archive,
         name = "org_lzma_lzma",
-        build_file = "@com_github_nelhage_rules_boost//:BUILD.lzma",
+        build_file = "@com_github_bitstothings_rules_boost//:BUILD.lzma",
         sha256 = "06327c2ddc81e126a6d9a78b0be5014b976a2c0832f492dcfc4755d7facf6d33",
         strip_prefix = "xz-5.2.7",
         urls = [
@@ -218,7 +218,7 @@ def boost_deps():
     maybe(
         http_archive,
         name = "boost",
-        build_file = "@com_github_nelhage_rules_boost//:BUILD.boost",
+        build_file = "@com_github_bitstothings_rules_boost//:BUILD.boost",
         patch_cmds = ["rm -f doc/pdf/BUILD"],
         patch_cmds_win = ["Remove-Item -Force doc/pdf/BUILD"],
         sha256 = "4b2136f98bdd1f5857f1c3dea9ac2018effe65286cf251534b6ae20cc45e1847",
